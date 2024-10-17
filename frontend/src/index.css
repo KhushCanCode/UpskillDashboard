@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --lightgreen: #252724;
+    --darkgreen: #1b1d1a;
+    --stone: #2f312e;
+    --txtcolor: #ababab;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--darkgreen);
+}
+
+.nav-link{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: 300ms ease;
+    cursor: pointer;
+    
+}
+.nav-link:hover{
+    background-color: var(--lightgreen);
+    color:white;
+}
+
+.white-drop-shadow {
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5); /* Adjust values for the desired effect */
+  }
+
+  
+#prompt::-webkit-scrollbar{
+    background-color: rgba(149, 146, 146, 0.064);
+    width: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+#prompt::-webkit-scrollbar-thumb{
+    background-color: rgb(77, 76, 76);
+    border-radius: 25px;
+    cursor: pointer;
+    
+}
+.working::-webkit-scrollbar{
+    background-color: rgba(149, 146, 146, 0.064);
+    width: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+.working::-webkit-scrollbar-thumb{
+    background-color: rgb(77, 76, 76);
+    border-radius: 25px;
+    cursor: pointer;
+    
+}
+.chatsCont::-webkit-scrollbar-thumb{
+    background-color: rgb(77, 76, 76);
+    border-radius: 25px;
+    cursor: pointer;
+    
+}
+.chatsCont::-webkit-scrollbar{
+    background-color: rgba(149, 146, 146, 0.064);
+    width: 5px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type="search"][data-has-value="true"]::-webkit-search-cancel-button {
+    display: none;
+}
