@@ -14,7 +14,7 @@ import Navbar from './Navbar';
 
 
 function Dashboard() {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
 
   return (

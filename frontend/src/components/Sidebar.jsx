@@ -1,21 +1,22 @@
 import { Link, useLocation } from 'react-router-dom'; 
+import { useState } from 'react';
 
 const navItems = [
-  { src: '/assets/home.svg', label: 'Home', to: '/' },
-  { src: '/assets/submissions.svg', label: 'Submissions', to: '/submissions' },
-  { src: '/assets/gems.svg', label: 'Gems', to: '/gems' },
-  { src: '/assets/chat.svg', label: 'Upskill AI', to: '/upskillai', hasOnClick: true },
+  { src: '/assets/home.svg', hoverSrc: '/assets/gradient/grhome.svg', label: 'Home', to: '/' },
+  { src: '/assets/submissions.svg', hoverSrc: '/assets/gradient/grsubmissions.svg', label: 'Submissions', to: '/submissions' },
+  { src: '/assets/gems.svg',hoverSrc: '/assets/gradient/grgems.svg', label: 'Gems', to: '/gems' },
+  { src: '/assets/chat.svg',hoverSrc: '/assets/gradient/grchat.svg', label: 'Upskill AI', to: '/upskillai', hasOnClick: true },
 ];
 
 const connectItems = [
-  { src: '/assets/clubs.svg', label: 'Clubs', to: '/clubs' },
-  { src: '/assets/resume.svg', label: 'Resume', to: '/resume' },
-  { src: '/assets/internship.svg', label: 'Internship', to: '/internship' },
+  { src: '/assets/clubs.svg', hoverSrc: '/assets/gradient/grclubs.svg', label: 'Clubs', to: '/clubs' },
+  { src: '/assets/resume.svg', hoverSrc: '/assets/gradient/grresume.svg', label: 'Resume', to: '/resume' },
+  { src: '/assets/internship.svg', hoverSrc: '/assets/gradient/grinternship.svg', label: 'Internship', to: '/internship' },
 ];
 
 const exploreItems = [
-  { src: '/assets/refer.svg', label: 'Refer & Earn', to: '/refer' },
-  { src: '/assets/hackathon.svg', label: 'Hackathon', to: '/hackathon' },
+  { src: '/assets/refer.svg', hoverSrc: '/assets/gradient/grrefer.svg', label: 'Refer & Earn', to: '/refer' },
+  { src: '/assets/hackathon.svg', hoverSrc:'/assets/gradient/grhackathon.svg', label: 'Hackathon', to: '/hackathon' },
 ];
 
 function Sidebar({isCollapsed, setIsCollapsed}) {
@@ -35,19 +36,22 @@ function Sidebar({isCollapsed, setIsCollapsed}) {
         <Link
           to={item.to}
           key={item.label}
-          className={`group nav-link ${isActive ? 'bg-gradient-to-r from-[#4ad04313] to-[#ffb81213] ' : ''} ${isCollapsed ? 'justify-center' : ''}`}
+          className={`group nav-link transition duration-300 hover:opacity-100  ${isActive ? 'bg-gradient-to-r from-[#49D0430D] to-[#FFB9120D] ' : 'opacity-50'} ${isCollapsed ? 'justify-center' : ''}`}
           onClick={handleLinkClick}
+          
         >
-            <div className="gradient-svg">
+            <div >
               <img
-                src={item.src}
+                src={isActive ? item.hoverSrc : item.src}
                 alt={item.label}
-                className={`transition-opacity duration-300 ${isActive ? 'is-active' : 'opacity-50 group-hover:opacity-100'}`}
+                className={`transition duration-300 `}
+                
+                
               />
             </div>
 
             <h3
-              className={`text-sm lg:text-base duration-300 ${isActive ? 'gradient-text' : 'text-txtcolor group-hover:gradient-text'} ${
+              className={`text-base transition duration-300 ${isActive ? 'gradient-text' : 'text-txtcolor hover:text-white'} ${
                 isCollapsed ? 'hidden' : ''
               }`}
             >
@@ -113,7 +117,7 @@ function Sidebar({isCollapsed, setIsCollapsed}) {
         {/* Help Icon */}
        
         <div
-          className={` bottom-8 md:bottom-4 lg:bottom-8 right-4  lg:right-5 bg-lightgreen w-fit p-2 rounded-md border border-gray-500
+          className={` bottom-8 md:bottom-4 lg:bottom-8 right-4  lg:right-5 bg-lightgreen w-fit p-2 rounded-md border border-gray-500 transition duration-300 hover:bg-[#505050] hover:cursor-pointer
             ${isCollapsed ? 'static transform translate-y-20 lg:translate-y-32' : 'absolute'}
             `}
         >
