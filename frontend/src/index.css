@@ -9,7 +9,7 @@
 }
 :root{
     --lightgreen: #252724;
-    --darkgreen: #1b1d1a;
+    --neutral: #191B19;
     --stone: #2f312e;
     --txtcolor: #ababab;
 }
@@ -19,11 +19,29 @@ html,body{
 }
 
 body{
-    font-family: "DM Sans", sans-serif;
-    background-color: var(--darkgreen);
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--neutral);
 }
 
-.nav-link{
+/* Gradient border */
+.gradient-border {
+    position: relative;
+    padding: .1rem; 
+    border-radius: 6px; 
+    background: linear-gradient(to right, #49d043, #ffb912);
+  }
+  .dark-bg{
+    background-color: #252725;
+    border-radius: 6px; 
+  }
+  /* Inner div to hold the content */
+  .gradient-border-content {
+    background: linear-gradient(to right, #49D0430D, #FFB9120D ); 
+    border-radius: 6px; 
+  }
+  
+
+.nav-link {
     padding: 0.5rem;
     border-radius: 0.5rem;
     display: flex;
@@ -31,61 +49,19 @@ body{
     gap: 0.5rem;
     transition: 300ms ease;
     cursor: pointer;
-    
-}
-.nav-link:hover{
-    background-color: var(--lightgreen);
-    color:white;
 }
 
-.white-drop-shadow {
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5); /* Adjust values for the desired effect */
-  }
-
-  
-#prompt::-webkit-scrollbar{
-    background-color: rgba(149, 146, 146, 0.064);
-    width: 10px;
-    cursor: pointer;
-    border-radius: 25px;
-}
-#prompt::-webkit-scrollbar-thumb{
-    background-color: rgb(77, 76, 76);
-    border-radius: 25px;
-    cursor: pointer;
-    
-}
-.working::-webkit-scrollbar{
-    background-color: rgba(149, 146, 146, 0.064);
-    width: 10px;
-    cursor: pointer;
-    border-radius: 25px;
-}
-.working::-webkit-scrollbar-thumb{
-    background-color: rgb(77, 76, 76);
-    border-radius: 25px;
-    cursor: pointer;
-    
-}
-.chatsCont::-webkit-scrollbar-thumb{
-    background-color: rgb(77, 76, 76);
-    border-radius: 25px;
-    cursor: pointer;
-    
-}
-.chatsCont::-webkit-scrollbar{
-    background-color: rgba(149, 146, 146, 0.064);
-    width: 5px;
-    cursor: pointer;
-    border-radius: 25px;
+.nav-link:hover {
+    background: linear-gradient(to right, #4ad04313, #ffb81213);
 }
 
-input[type="search"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+/* Gradient for text */
+.gradient-text {
+    background: linear-gradient(to right, #49d043, #ffb912);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-input[type="search"][data-has-value="true"]::-webkit-search-cancel-button {
-    display: none;
-}
+
+

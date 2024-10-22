@@ -1,0 +1,17 @@
+/* Gradient border */
+.gradient-border {
+    position: relative;
+    padding: .1rem; 
+    border-radius: 6px; 
+    background: linear-gradient(to right, #49d043, #ffb912);
+  }
+  .dark-bg{
+    background-color: #252725;
+    border-radius: 6px; 
+  }
+  /* Inner div to hold the content */
+  .gradient-border-content {
+    background: linear-gradient(to right, #4ad04313, #ffb81213 ); 
+    border-radius: 6px; 
+  }
+  

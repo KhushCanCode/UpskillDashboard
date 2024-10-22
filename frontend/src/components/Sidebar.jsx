@@ -4,7 +4,7 @@ const navItems = [
   { src: '/assets/home.svg', label: 'Home', to: '/' },
   { src: '/assets/submissions.svg', label: 'Submissions', to: '/submissions' },
   { src: '/assets/gems.svg', label: 'Gems', to: '/gems' },
-  { src: '/assets/chat.svg', label: 'Upskill AI', to: '/chatlogin', hasOnClick: true },
+  { src: '/assets/chat.svg', label: 'Upskill AI', to: '/upskillai', hasOnClick: true },
 ];
 
 const connectItems = [
@@ -35,22 +35,24 @@ function Sidebar({isCollapsed, setIsCollapsed}) {
         <Link
           to={item.to}
           key={item.label}
-          className={`group nav-link ${isCollapsed ? 'justify-center' : ''} ${isActive ? 'bg-lightgreen' : '' }`}
+          className={`group nav-link ${isActive ? 'bg-gradient-to-r from-[#4ad04313] to-[#ffb81213] ' : ''} ${isCollapsed ? 'justify-center' : ''}`}
           onClick={handleLinkClick}
         >
-          <div>
-            <img src={item.src} alt={item.label} className={`transition-opacity duration-300 ${
-                isActive
-                  ? 'opacity-100' 
-                  : 'opacity-50 group-hover:opacity-100'}`}
-            />
-          </div>
+            <div className="gradient-svg">
+              <img
+                src={item.src}
+                alt={item.label}
+                className={`transition-opacity duration-300 ${isActive ? 'is-active' : 'opacity-50 group-hover:opacity-100'}`}
+              />
+            </div>
 
-          <h3
-            className={`text-base lg:text-lg ${isActive ? 'text-white' : 'text-txtcolor group-hover:text-white'} ${isCollapsed ? 'hidden' : ''}`}
-          >
-            {item.label}
-          </h3>
+            <h3
+              className={`text-sm lg:text-base duration-300 ${isActive ? 'gradient-text' : 'text-txtcolor group-hover:gradient-text'} ${
+                isCollapsed ? 'hidden' : ''
+              }`}
+            >
+              {item.label}
+            </h3>
         </Link>
       );
     });
@@ -60,7 +62,7 @@ function Sidebar({isCollapsed, setIsCollapsed}) {
   return (
     <div className='z-50'>
       <div
-        className={`h-[100vh] relative bg-darkgreen py-5 lg:py-10 px-5 transition-all duration-300 ${
+        className={`h-[100vh] relative  bg-neutral-1200 border-r border-neutral-700  py-5 md:py-6 px-3 lg:px-5 transition-all duration-300 ${
           isCollapsed
             ? '  flex-col items-center hidden sm:flex'
             : ''
@@ -72,7 +74,7 @@ function Sidebar({isCollapsed, setIsCollapsed}) {
             <div>
               <img src="/logo/logo.svg" alt="Logo" className={`${isCollapsed ? 'hidden' : ''}`} />
             </div>
-            <h3 className={`text-white text-lg font-semibold ${isCollapsed ? 'hidden' : ''}`}>
+            <h3 className={`text-white text-base lg:text-lg font-semibold tracking-widest font-['Montserrat'] ${isCollapsed ? 'hidden' : ''}`}>
               UpskillMafia
             </h3>
           </div>
@@ -88,37 +90,42 @@ function Sidebar({isCollapsed, setIsCollapsed}) {
         </div>
 
         {/* Navigation Menu-----------------------------------------------------------------------*/}
-        <div className="mt-3 lg:mt-5 flex flex-col gap-2">
+        <div className="mt-5  flex flex-col gap-1 lg:gap-2">
           {renderNavItems(navItems)}
 
           {/* Connect & Build */}
-          <div className="flex items-center">
-            <p className={`text-gray-500 text-sm w-[80%] ${isCollapsed ? 'hidden' : ''}`}>Connect & Build</p>
-            <div className="h-px w-full bg-gray-500"></div>
+          <div className={`flex items-center ${isCollapsed ? 'my-2' : ''}`}>
+            <p className={`text-neutral-500 text-sm w-[80%] ${isCollapsed ? 'hidden' : ''}`}>Connect & Build</p>
+            <div className="h-px w-full bg-neutral-500"></div>
           </div>
 
           {renderNavItems(connectItems)}
 
           {/* Explore */}
-          <div className="flex items-center mt-3">
-            <p className={`text-gray-500 text-sm w-[80%] ${isCollapsed ? 'hidden' : ''}`}>Explore</p>
-            <div className="h-px w-full bg-gray-500"></div>
+          <div className={`flex items-center ${isCollapsed ? 'my-2' : ''}`}>
+            <p className={`text-neutral-500 text-sm w-[80%] ${isCollapsed ? 'hidden' : ''}`}>Explore</p>
+            <div className="h-px w-full bg-neutral-500"></div>
           </div>
 
           {renderNavItems(exploreItems)}
         </div>
 
         {/* Help Icon */}
+       
         <div
-          className={`absolute bottom-4 lg:bottom-8 right-4  lg:right-5 bg-lightgreen w-fit p-2 rounded-md border border-gray-500`}
+          className={` bottom-8 md:bottom-4 lg:bottom-8 right-4  lg:right-5 bg-lightgreen w-fit p-2 rounded-md border border-gray-500
+            ${isCollapsed ? 'static transform translate-y-20 lg:translate-y-32' : 'absolute'}
+            `}
         >
           <img src="/assets/question.svg" alt="Help" />
         </div>
+       
+       
       </div>
 
-      {/* Collapse Button */}
+      {/* Collapse Button for mobile */}
       {isCollapsed && (
-        <div className="fixed top-5 left-5 sm:hidden z-50 cursor-pointer" onClick={() => setIsCollapsed(!isCollapsed)}>
+        <div className="fixed top-5 left-3 sm:hidden z-50 cursor-pointer" onClick={() => setIsCollapsed(!isCollapsed)}>
           <img
             src="/assets/collapse.svg"
             alt="collapse"

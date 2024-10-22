@@ -1,0 +1,53 @@
+@import url('colors.css');
+@import url('ui-variables.css');
+@import url('typescale.css');
+
+body {
+  background-color: var(--neutral-900);
+  color: var(--neutral-900);
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.navbar{
+    width: 240px;
+    height: 100%;
+    background-color: var(--neutral-1000);
+}
+.inner-page{
+    width: 100%;
+    height: 100%;
+    background-color: var(--neutral-900);
+
+
+}
+
+.surface{
+    width: 240px;
+    height: 180px;
+    background-color: var(--neutral-800);
+    border: 1px solid var(--neutral-700);
+}
+
+.surface2{
+    width: 240px;
+    height: 180px;
+    background-color: var(--neutral-700);
+    border: 1px solid var(--neutral-600);
+}
+.surface3{
+    width: 240px;
+    height: 180px;
+    background-color: var(--neutral-600);
+    border: 1px solid var(--neutral-500);
+}

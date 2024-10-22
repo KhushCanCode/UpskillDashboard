@@ -1,0 +1,70 @@
+@import url('colors.css');
+@import url('ui-variables.css');
+@import url('typescale.css');
+
+:root {
+    /* Letter Spacing */
+    --ls-tt: -0.5px; /* Very tight letter spacing for compact text */
+    --ls-t: -0.25px; /* Tight letter spacing for slightly condensed text */
+    --ls-n: 0px;     /* Normal letter spacing for standard text */
+    --ls-w: 0.25px;  /* Wider letter spacing for more open text */
+    --ls-wr: 0.5px;  /* Even wider letter spacing for increased readability */
+    --ls-wi: 1px;    /* Very wide letter spacing for maximum openness */
+
+    /* Line Height */
+    --lh-xs: 16px;   /* For very small text */
+    --lh-sm: 18px;   /* For small text */
+    --lh-md: 20px;   /* For medium text */
+    --lh-lg: 24px;   /* For larger text */
+    --lh-xl: 28px;   /* For extra-large text */
+    --lh-2xl: 32px;  /* For very large text */
+    --lh-3xl: 36px;  /* For huge text */
+    --lh-4xl: 40px;  /* Extra large text */
+    --lh-5xl: 56px;  /* Extremely large text */
+    --lh-6xl: 64px;  /* Maximum large text */
+
+    /* Corner Radius */
+    --cr-n: 0px;     /* No rounding */
+    --cr-xs: 4px;    /* Slight rounding */
+    --cr-sm: 6px;    /* Small rounded corners */
+    --cr-md: 8px;    /* Standard rounding */
+    --cr-l: 12px;    /* Larger rounding */
+    --cr-xl: 16px;   /* Extra large rounding */
+    --cr-2xl: 20px;  /* Extra extra large rounding */
+    --cr-3xl: 24px;  /* Very large rounding */
+    --cr-f: 32px;    /* Maximum rounding for larger elements */
+    --cr-mx: 36px;   /* Maximum large rounding */
+    --cr-r: 9999px;  /* Extreme rounding for special cases */
+
+    /* Layer Opacity */
+    --lo-oc: 100%;   /* Fully opaque */
+    --lo-hi: 90%;    /* Very high opacity */
+    --lo-mh: 80%;    /* Medium-high opacity */
+    --lo-m: 70%;     /* Medium opacity */
+    --lo-ml: 50%;    /* Medium-low opacity */
+    --lo-lo: 30%;    /* Low opacity */
+    --lo-vl: 20%;    /* Very low opacity */
+    --lo-tr: 10%;    /* Nearly transparent */
+    --lo-in: 0%;     /* Fully transparent */
+
+    /* Gap */
+    --gp-n: 0px;     /* No gap */
+    --gp-2xs: 2px;   /* Extra extra small gap */
+    --gp-xs: 4px;    /* Extra small gap */
+    --gp-s: 6px;     /* Small gap */
+    --gp-m: 8px;     /* Medium gap */
+    --gp-xm: 10px;   /* Large gap */
+    --gp-2xm: 12px;  /* Extra large gap */
+    --gp-l: 14px;    /* Extra extra large gap */
+    --gp-xl: 16px;   /* Extra extra extra large gap */
+    --gp-2xl: 18px;  /* Extra extra extra extra large gap */
+    --gp-3xl: 20px;  /* Extra extra extra extra extra large gap */
+    --gp-4xl: 24px;  /* Extra extra extra extra extra extra large gap */
+    --gp-5xl: 28px;  /* Extra extra extra extra extra extra extra large gap */
+    --gp-6xl: 32px;  /* Extra extra extra extra extra extra extra extra large gap */
+    --gp-7xl: 36px;  /* Extra extra extra extra extra extra extra extra extra large gap */
+    --gp-8xl: 40px;  /* Extra extra extra extra extra extra extra extra extra extra large gap */
+    --gp-9xl: 48px;  /* Extra extra extra extra extra extra extra extra extra extra extra large gap */
+    --gp-10xl: 56px; /* Extra extra extra extra extra extra extra extra extra extra extra extra large gap */
+    --gp-11xl: 64px; /* Extra extra extra extra extra extra extra extra extra extra extra extra extra large gap */
+}

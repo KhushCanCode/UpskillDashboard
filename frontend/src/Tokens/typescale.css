@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('colors.css');
+@import url('ui-variables.css');
+@import url('typescale.css');
+
+
+/* Variables for font family and weights */
+:root {
+    --ff-dm: "DM Sans", sans-serif;
+
+    /* Font Weights */
+    --fw-th: 100;
+    --fw-xl: 200;
+    --fw-li: 300;
+    --fw-r: 400;
+    --fw-m: 500;
+    --fw-sb: 600;
+    --fw-b: 700;
+    --fw-xb: 800;
+    --fw-bl: 900;
+
+    /* Font Sizes */
+    --fs-13: 13px;
+    --fs-14: 14px;
+    --fs-15: 15px;
+    --fs-16: 16px;
+    --fs-18: 18px;
+    --fs-20px: 20px;
+    --fs-22px: 22px;
+    --fs-24px: 24px;
+    --fs-28px: 28px;
+    --fs-32px: 32px;
+    --fs-36px: 36px;
+    --fs-40px: 40px;
+    --fs-48px: 48px;
+    --fs-56px: 56px;
+    --fs-64px: 64px;
+
+    /* Letter Spacing */
+    --ls-ttst: -0.5px;
+    --ls-tt: -0.25px;
+    --ls-nml: 0px;
+    --ls-wd: 0.25px;
+    --ls-wdr: 0.5px;
+    --ls-wdst: 1px;
+
+    /* Default Color */
+    --white: #ffffff;
+}
+
+/* Heading Classes */
+.h-xs {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-20);
+    font-weight: var(--fw-sb);
+    letter-spacing: var(--ls-tt);
+    color: var(--white);
+}
+
+.h-sm {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-24);
+    font-weight: var(--fw-sb);
+    letter-spacing: var(--ls-tt);
+    color: var(--white);
+}
+
+.h-md {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-28);
+    font-weight: var(--fw-sb);
+    letter-spacing: var(--ls-tt);
+    color: var(--white);
+}
+
+.h-l {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-32);
+    font-weight: var(--fw-b);
+    letter-spacing: var(--ls-tt);
+    color: var(--white);
+}
+
+.h-xl {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-36);
+    font-weight: var(--fw-b);
+    letter-spacing: var(--ls-tt);
+    color: var(--white);
+}
+
+.h-2xl {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-40);
+    font-weight: var(--fw-b);
+    letter-spacing: var(--ls-tt);
+    color: var(--white);
+}
+
+.h-3xl {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-48);
+    font-weight: var(--fw-xb);
+    letter-spacing: var(--ls-tt);
+    color: var(--white);
+}
+
+.h-4xl {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-56);
+    font-weight: var(--fw-xb);
+    letter-spacing: var(--ls-tt);
+    color: var(--white);
+}
+
+.h-5xl {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-64);
+    font-weight: var(--fw-bl);
+    letter-spacing: var(--ls-tt);
+    color: var(--white);
+}
+
+/* Body Classes */
+.b-def {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-16);
+    font-weight: var(--fw-r);
+    letter-spacing: var(--ls-nml);
+    color: var(--white);
+}
+
+.b-l {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-18);
+    font-weight: var(--fw-r);
+    letter-spacing: var(--ls-nml);
+    color: var(--white);
+}
+
+.b-m {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-20);
+    font-weight: var(--fw-r);
+    letter-spacing: var(--ls-nml);
+    color: var(--white);
+}
+
+/* Caption Classes */
+.c-2xs {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-13);
+    font-weight: var(--fw-m);
+    letter-spacing: var(--ls-nml);
+    color: var(--white);
+}
+
+.c-xs {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-14);
+    font-weight: var(--fw-m);
+    letter-spacing: var(--ls-nml);
+    color: var(--white);
+}
+
+.c-s {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-15);
+    font-weight: var(--fw-m);
+    letter-spacing: var(--ls-nml);
+    color: var(--white);
+}
+
+/* Label Classes */
+.l-s {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-13);
+    font-weight: var(--fw-m);
+    letter-spacing: var(--ls-nml);
+    color: var(--white);
+}
+
+.l-m {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-14);
+    font-weight: var(--fw-m);
+    letter-spacing: var(--ls-nml);
+    color: var(--white);
+}
+
+.l-l {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-16);
+    font-weight: var(--fw-sb);
+    letter-spacing: var(--ls-nml);
+    color: var(--white);
+}
+
+.l-xl {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-18);
+    font-weight: var(--fw-sb);
+    letter-spacing: var(--ls-nml);
+    color: var(--white);
+}
+
+.l-2xl {
+    font-family: var(--ff-dm);
+    font-size: var(--fs-20);
+    font-weight: var(--fw-sb);
+    letter-spacing: var(--ls-nml);
+    color: var(--white);
+}
